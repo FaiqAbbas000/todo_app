@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="header" class="bolckInline">
+            <div id="displayUser"></div>
+            <div id="searchArea" >
+                <div id="searchItems" >
+                    <input type="text" name="search" id="c" placeholder="Search Items" />
+                    <button id="searchBtn">Search</button>
+                </div>
+
+                <div id="addItems">
+                    <input type="text" name="search" id="add_items" placeholder="item" />
+                    <button id="addBtn">Add</button>
+                </div>
+
+                <div id="updateItems">
+                    <input type="text" name="search" id="update_items" placeholder="Enter Items" />
+                    <button id="updateBtn">Update</button>
+                </div>
+
+                <div id="deleteItems">
+                    <input type="text" name="search" id="delete_items" placeholder="Search Items" />
+                    <button id="deleteBtn">Delete</button>
+                </div>
+
+            </div>
+        </div>
+        <div id="content" class="bolckInline row">
+            <div id="navDiv" class="col-2">
+                <div id="sideNav">
+                    <ul>
+                        <li onclick="search_items()" onload="search_items()">View List</li>
+                        <li onclick="add_items()">Add Items</li>
+                        <li onclick="update_items()">Update Items</li>
+                        <li onclick="delete_items()">Delete Items</li>
+                        <li onclick="logout()">Logout</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="contentArea" class="col-10">
+                <table>
+                    <thead>
+                    <tr class="col-14">
+                    <th class="col-2">Sr.No</th>
+                    <th class="col-3">Created Time</th>
+                    <th col="col-6">Itmes</th>
+                    <th class="col-3">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tb">
+                        <tr>
+                            <td colspan="14">
+                                NO Item Exists !!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
